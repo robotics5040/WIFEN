@@ -1145,7 +1145,8 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
 
         private void timerGamepad_Tick(object sender, EventArgs e)
         {
-
+            if (p3 != null && p3.controller != null)
+                p3.onUpdateTick();
         }
 
         private void btnGamepad_Click(object sender, EventArgs e)

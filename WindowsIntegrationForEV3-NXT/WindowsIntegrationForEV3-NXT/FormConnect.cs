@@ -83,6 +83,7 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         this.button2.Text = "Connect";
                         MessageBox.Show(eP1_NXT.Message);
+                        parent.p1 = null;
                     }
                 }
                 else
@@ -100,6 +101,7 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         this.button2.Text = "Connect";
                         MessageBox.Show(eP1_EV3.Message);
+                        parent.p1 = null;
                     }
                 }
             }
@@ -120,6 +122,7 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         this.button2.Text = "Connect";
                         MessageBox.Show(ep2_NXT.Message);
+                        parent.p2 = null;
                     }
                 }
                 else
@@ -137,6 +140,7 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         this.button2.Text = "Connect";
                         MessageBox.Show(ep2_EV3.Message);
+                        parent.p2 = null;
                     }
                 }
             }
@@ -157,6 +161,7 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         this.button2.Text = "Connect";
                         MessageBox.Show(ep3_NXT.Message);
+                        parent.p3 = null;
                     }
                 }
                 else
@@ -174,6 +179,7 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         this.button2.Text = "Connect";
                         MessageBox.Show(ep3_EV3.Message);
+                        parent.p3 = null;
                     }
                 }
             }
