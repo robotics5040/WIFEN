@@ -738,6 +738,9 @@
             this.touchUL.Size = new System.Drawing.Size(86, 86);
             this.touchUL.TabIndex = 85;
             this.touchUL.TabStop = false;
+            this.touchUL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchUL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchCL
             // 
@@ -747,6 +750,9 @@
             this.touchCL.Size = new System.Drawing.Size(86, 86);
             this.touchCL.TabIndex = 86;
             this.touchCL.TabStop = false;
+            this.touchCL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchCL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchCL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchDL
             // 
@@ -756,6 +762,9 @@
             this.touchDL.Size = new System.Drawing.Size(86, 86);
             this.touchDL.TabIndex = 87;
             this.touchDL.TabStop = false;
+            this.touchDL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchDL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchDL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchDR
             // 
@@ -765,6 +774,9 @@
             this.touchDR.Size = new System.Drawing.Size(86, 86);
             this.touchDR.TabIndex = 90;
             this.touchDR.TabStop = false;
+            this.touchDR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchDR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchDR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchCR
             // 
@@ -774,6 +786,9 @@
             this.touchCR.Size = new System.Drawing.Size(86, 86);
             this.touchCR.TabIndex = 89;
             this.touchCR.TabStop = false;
+            this.touchCR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchCR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchCR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchUR
             // 
@@ -783,6 +798,9 @@
             this.touchUR.Size = new System.Drawing.Size(86, 86);
             this.touchUR.TabIndex = 88;
             this.touchUR.TabStop = false;
+            this.touchUR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchUR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchDC
             // 
@@ -792,6 +810,9 @@
             this.touchDC.Size = new System.Drawing.Size(86, 86);
             this.touchDC.TabIndex = 93;
             this.touchDC.TabStop = false;
+            this.touchDC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchDC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchDC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchCenter
             // 
@@ -801,6 +822,9 @@
             this.touchCenter.Size = new System.Drawing.Size(86, 86);
             this.touchCenter.TabIndex = 92;
             this.touchCenter.TabStop = false;
+            this.touchCenter.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchCenter.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchCenter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // touchUC
             // 
@@ -810,6 +834,9 @@
             this.touchUC.Size = new System.Drawing.Size(86, 86);
             this.touchUC.TabIndex = 91;
             this.touchUC.TabStop = false;
+            this.touchUC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchUC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
             // timerGamepad
             // 

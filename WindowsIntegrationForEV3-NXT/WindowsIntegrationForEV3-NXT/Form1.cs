@@ -1116,31 +1116,20 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
 
         private void touchControl_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            label1.Visible = true;
-            label1.Text = "L: " + 0 + " R: " + 0;
+            if (p2 != null && sender is PictureBox)
+                p2.onCursorDownEvent((PictureBox)sender, e);
         }
 
         private void touchControl_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            
+            if (p2 != null && sender is PictureBox)
+                p2.onCursorUpEvent((PictureBox)sender, e);
         }
 
         private void touchControl_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            PictureBox s = (PictureBox)sender;
-
-            int centerx = s.Bounds.Width / 2;
-            int centery = s.Bounds.Height / 2;
-            int x = e.X - centerx;
-            int y = (e.Y - centery) * -1;
-
-            int distance = (int)Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
-
-            x = (int) Math.Floor((double)(x / 5)) * 5;
-            y = (int)Math.Floor((double)(y / 5)) * 5;
-
-            label1.Visible = true;
-            label1.Text = "L: " + x + " R: " + y;
+            if (p2 != null && sender is PictureBox)
+                p2.onCursorMoveEvent((PictureBox)sender, e);
         }
 
         private void timerGamepad_Tick(object sender, EventArgs e)
