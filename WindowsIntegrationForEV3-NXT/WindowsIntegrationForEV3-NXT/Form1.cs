@@ -38,8 +38,8 @@ namespace WindowsIntegrationForEV3_NXT
         KinectSensor sensor;
         SpeechRecognitionEngine speechRecognizer;
 
-        NxtBrick nxt;
-        Brick<Sensor, Sensor, Sensor, Sensor> ev3;
+        public NxtBrick nxt;
+        public Brick<Sensor, Sensor, Sensor, Sensor> ev3;
 
         DispatcherTimer readyTimer;
 

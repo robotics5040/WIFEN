@@ -55,6 +55,50 @@ namespace WindowsIntegrationForEV3_NXT
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (this.button2.Text == "Disconnect")
+            {
+                switch (input)
+                {
+                    case ControlInput.Type.Keyboard:
+                        if (parent.p1.isNXT)
+                            parent.p1.nxt.Connection.Close();
+                        else
+                            parent.p1.ev3.Connection.Close();
+                        parent.p1 = null;
+                        parent.labelKeyboard.Text = " ";
+                        parent.pictureStatusKeyboard.BackgroundImage = Properties.Resources.nxt_red;
+                        break;
+                    case ControlInput.Type.Touch:
+                        if (parent.p2.isNXT)
+                            parent.p2.nxt.Connection.Close();
+                        else
+                            parent.p2.ev3.Connection.Close();
+                        parent.p2 = null;
+                        parent.labelTouch.Text = " ";
+                        parent.pictureStatusTouch.BackgroundImage = Properties.Resources.nxt_red;
+                        break;
+                    case ControlInput.Type.Gamepad:
+                        if (parent.p3.isNXT)
+                            parent.p3.nxt.Connection.Close();
+                        else
+                            parent.p3.ev3.Connection.Close();
+                        parent.p3 = null;
+                        parent.labelGamepad.Text = " ";
+                        parent.pictureStatusGamepad.BackgroundImage = Properties.Resources.nxt_red;
+                        break;
+                    case ControlInput.Type.Kinect:
+                        if (parent.p4.isNXT)
+                            parent.nxt.Disconnect();
+                        else
+                            parent.ev3.Connection.Close();
+                        parent.p4 = null;
+                        parent.labelKinect.Text = " ";
+                        parent.pictureStatusKinect.BackgroundImage = Properties.Resources.nxt_red;
+                        break;
+                }
+                button2.Text = "Connect";
+            }
+
             string com;
 
             if (radioButton1.Checked)
