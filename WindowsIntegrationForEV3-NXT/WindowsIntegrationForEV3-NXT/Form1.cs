@@ -148,9 +148,6 @@ namespace WindowsIntegrationForEV3_NXT
         {
             try
             {
-                this.labelStatusKinect.Text = "Attempting to connect. . .";
-                this.labelStatusKinect.Refresh();
-
                 if (p4.isNXT)
                 {
                     this.nxt = new NxtBrick(NxtCommLinkType.Bluetooth, (byte)Convert.ToInt32(comPort));
@@ -180,15 +177,11 @@ namespace WindowsIntegrationForEV3_NXT
 
                     name = "EV3";
                 }
-
-                this.labelStatusKinect.Text = "Connected to " + name;
-                this.timerHideStatNxt.Enabled = true;
                 this.timerUpdateNxt.Enabled = true;
             }
             catch (Exception enxt)
             {
                 Console.Write(enxt.StackTrace);
-                this.labelStatusKinect.Text = "Disconnected";
             }
         }
 
@@ -970,12 +963,6 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
             labelStatus.Visible = false;
         }
 
-        private void timerHideStatNxt_Tick(object sender, EventArgs e)
-        {
-            timerHideStatNxt.Enabled = false;
-            labelStatusKinect.Visible = false;
-        }
-
         private void timerUpdateNxt_Tick(object sender, EventArgs e)
         {
             this.timerUpdateNxt.Enabled = true;
@@ -1129,13 +1116,15 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
         private void touchControl_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (p2 != null && sender is PictureBox)
-                p2.onCursorMoveEvent((PictureBox)sender, e);
+                p2.onCursorMoveEvent((PictureBox)sender);
         }
 
         private void timerGamepad_Tick(object sender, EventArgs e)
         {
             if (p3 != null && p3.controller != null)
-                p3.onUpdateTick();
+                p3.onUpdateTick(label1);
+            timerGamepad.Enabled = true;
+            p3.controller.Vibrate(0, 0);
         }
 
         private void btnGamepad_Click(object sender, EventArgs e)
@@ -1148,7 +1137,20 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
             {
                 p3.controller = new GamepadState(0);
                 timerGamepad.Enabled = true;
+                p3.controller.Vibrate(1, 1);
             }
+        }
+
+        private void touchControl_MouseMove(object sender, EventArgs e)
+        {
+            if (p2 != null && sender is PictureBox)
+                p2.onCursorMoveEvent((PictureBox)sender);
+        }
+
+        private void touchUL_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
+        {
+            if (p2 != null && sender is PictureBox)
+                p2.onCursorMoveEvent((PictureBox)sender);
         }
 
     }

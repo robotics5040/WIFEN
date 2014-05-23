@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsIntegrationForEV3_NXT
 {
@@ -19,16 +20,39 @@ namespace WindowsIntegrationForEV3_NXT
         public ControlGamepad(MonoBrick.EV3.Brick<MonoBrick.EV3.Sensor, MonoBrick.EV3.Sensor, MonoBrick.EV3.Sensor, MonoBrick.EV3.Sensor> ev3Brick) :
             base(ev3Brick) { }
 
-        public void onUpdateTick()
+        public void onUpdateTick(Label label)
         {
             this.controller.Update();
 
-            if ((int) controller.RightStick.Position.Y != powerR || (int) controller.LeftStick.Position.Y != powerL)
+            if (controller.LeftStick.Position.Y > 0.2)
+                powerL = (int)(controller.LeftStick.Position.Y * 100) - 20;
+            else if (controller.LeftStick.Position.Y < -0.2)
+                powerL = (int)(controller.LeftStick.Position.Y * 100) + 20;
+            else
+                powerL = 0;
+
+            if (controller.RightStick.Position.Y > 0.2)
+                powerR = (int)(controller.RightStick.Position.Y * 100) - 20;
+            else if (controller.RightStick.Position.Y < -0.2)
+                powerR = (int)(controller.RightStick.Position.Y * 100) + 20;
+            else
+                powerR = 0;
+
+            if (controller.A)
             {
-                powerL = (int) controller.LeftStick.Position.Y;
-                powerR = (int) controller.RightStick.Position.Y;
-                this.updateDrive();
+                powerL = 60;
+                powerR = 60;
             }
+            else if (controller.B)
+            {
+                powerL = 0;
+                powerR = 0;
+            }
+
+            label.Visible = true;
+            label.Text = "R" + powerR + "L" + powerL; 
+
+            this.updateDrive();
         }
 
         public override void updateNXT()

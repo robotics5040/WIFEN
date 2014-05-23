@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WindowsIntegrationForEV3-NXT")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("WIFEN")]
+[assembly: AssemblyDescription("Windows Integration for EV3/NXT")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Loveland Robotics")]
 [assembly: AssemblyProduct("WindowsIntegrationForEV3-NXT")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("WIFEN is liscensed under Creative Commons BY-NC 4.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

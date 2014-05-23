@@ -32,7 +32,7 @@ namespace WindowsIntegrationForEV3_NXT
             isDown = false;
         }
 
-        public void onCursorMoveEvent(PictureBox sender, MouseEventArgs e)
+        public void onCursorMoveEvent(PictureBox sender)
         {
             if (isDown)
             {

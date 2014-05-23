@@ -48,19 +48,14 @@
             this.btnTglDrive = new System.Windows.Forms.Button();
             this.btnTglManip = new System.Windows.Forms.Button();
             this.btnEStop = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelStatusKinect = new System.Windows.Forms.Label();
+            this.labelKinect = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.timerHideStatKinect = new System.Windows.Forms.Timer(this.components);
-            this.timerHideStatNxt = new System.Windows.Forms.Timer(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.timerUpdateNxt = new System.Windows.Forms.Timer(this.components);
-            this.labelStatusTouch = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelStatusGamepad = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelStatusKeyboard = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.labelTouch = new System.Windows.Forms.Label();
+            this.labelGamepad = new System.Windows.Forms.Label();
+            this.labelKeyboard = new System.Windows.Forms.Label();
             this.btnConnectKeyboard = new System.Windows.Forms.Button();
             this.btnConnectTouch = new System.Windows.Forms.Button();
             this.btnConnectGamepad = new System.Windows.Forms.Button();
@@ -325,30 +320,17 @@
             this.btnEStop.UseVisualStyleBackColor = true;
             this.btnEStop.Click += new System.EventHandler(this.btnEStop_Click);
             // 
-            // label8
+            // labelKinect
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(230, 431);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 26);
-            this.label8.TabIndex = 47;
-            this.label8.Text = " ";
-            // 
-            // labelStatusKinect
-            // 
-            this.labelStatusKinect.AutoSize = true;
-            this.labelStatusKinect.BackColor = System.Drawing.Color.LightGray;
-            this.labelStatusKinect.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusKinect.ForeColor = System.Drawing.Color.Black;
-            this.labelStatusKinect.Location = new System.Drawing.Point(385, 431);
-            this.labelStatusKinect.Name = "labelStatusKinect";
-            this.labelStatusKinect.Size = new System.Drawing.Size(264, 43);
-            this.labelStatusKinect.TabIndex = 49;
-            this.labelStatusKinect.Text = "Disconnected";
-            this.labelStatusKinect.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelKinect.AutoSize = true;
+            this.labelKinect.BackColor = System.Drawing.Color.White;
+            this.labelKinect.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKinect.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelKinect.Location = new System.Drawing.Point(230, 431);
+            this.labelKinect.Name = "labelKinect";
+            this.labelKinect.Size = new System.Drawing.Size(65, 26);
+            this.labelKinect.TabIndex = 47;
+            this.labelKinect.Text = " ";
             // 
             // label10
             // 
@@ -366,11 +348,6 @@
             this.timerHideStatKinect.Interval = 4000;
             this.timerHideStatKinect.Tick += new System.EventHandler(this.timerHideStatKinect_Tick);
             // 
-            // timerHideStatNxt
-            // 
-            this.timerHideStatNxt.Interval = 4000;
-            this.timerHideStatNxt.Tick += new System.EventHandler(this.timerHideStatNxt_Tick);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -386,80 +363,41 @@
             // 
             this.timerUpdateNxt.Tick += new System.EventHandler(this.timerUpdateNxt_Tick);
             // 
-            // labelStatusTouch
+            // labelTouch
             // 
-            this.labelStatusTouch.AutoSize = true;
-            this.labelStatusTouch.BackColor = System.Drawing.Color.LightGray;
-            this.labelStatusTouch.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusTouch.ForeColor = System.Drawing.Color.Black;
-            this.labelStatusTouch.Location = new System.Drawing.Point(385, 261);
-            this.labelStatusTouch.Name = "labelStatusTouch";
-            this.labelStatusTouch.Size = new System.Drawing.Size(264, 43);
-            this.labelStatusTouch.TabIndex = 70;
-            this.labelStatusTouch.Text = "Disconnected";
-            this.labelStatusTouch.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelTouch.AutoSize = true;
+            this.labelTouch.BackColor = System.Drawing.Color.White;
+            this.labelTouch.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTouch.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelTouch.Location = new System.Drawing.Point(230, 261);
+            this.labelTouch.Name = "labelTouch";
+            this.labelTouch.Size = new System.Drawing.Size(65, 26);
+            this.labelTouch.TabIndex = 69;
+            this.labelTouch.Text = " ";
             // 
-            // label3
+            // labelGamepad
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(230, 261);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 26);
-            this.label3.TabIndex = 69;
-            this.label3.Text = " ";
+            this.labelGamepad.AutoSize = true;
+            this.labelGamepad.BackColor = System.Drawing.Color.White;
+            this.labelGamepad.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGamepad.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelGamepad.Location = new System.Drawing.Point(230, 347);
+            this.labelGamepad.Name = "labelGamepad";
+            this.labelGamepad.Size = new System.Drawing.Size(65, 26);
+            this.labelGamepad.TabIndex = 73;
+            this.labelGamepad.Text = " ";
             // 
-            // labelStatusGamepad
+            // labelKeyboard
             // 
-            this.labelStatusGamepad.AutoSize = true;
-            this.labelStatusGamepad.BackColor = System.Drawing.Color.LightGray;
-            this.labelStatusGamepad.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusGamepad.ForeColor = System.Drawing.Color.Black;
-            this.labelStatusGamepad.Location = new System.Drawing.Point(385, 347);
-            this.labelStatusGamepad.Name = "labelStatusGamepad";
-            this.labelStatusGamepad.Size = new System.Drawing.Size(264, 43);
-            this.labelStatusGamepad.TabIndex = 74;
-            this.labelStatusGamepad.Text = "Disconnected";
-            this.labelStatusGamepad.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(230, 347);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 26);
-            this.label6.TabIndex = 73;
-            this.label6.Text = " ";
-            // 
-            // labelStatusKeyboard
-            // 
-            this.labelStatusKeyboard.AutoSize = true;
-            this.labelStatusKeyboard.BackColor = System.Drawing.Color.LightGray;
-            this.labelStatusKeyboard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusKeyboard.ForeColor = System.Drawing.Color.Black;
-            this.labelStatusKeyboard.Location = new System.Drawing.Point(385, 173);
-            this.labelStatusKeyboard.Name = "labelStatusKeyboard";
-            this.labelStatusKeyboard.Size = new System.Drawing.Size(264, 43);
-            this.labelStatusKeyboard.TabIndex = 78;
-            this.labelStatusKeyboard.Text = "Disconnected";
-            this.labelStatusKeyboard.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(230, 173);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 26);
-            this.label11.TabIndex = 77;
-            this.label11.Text = " ";
+            this.labelKeyboard.AutoSize = true;
+            this.labelKeyboard.BackColor = System.Drawing.Color.White;
+            this.labelKeyboard.Font = new System.Drawing.Font("WebHostingHub-Glyphs", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKeyboard.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelKeyboard.Location = new System.Drawing.Point(230, 173);
+            this.labelKeyboard.Name = "labelKeyboard";
+            this.labelKeyboard.Size = new System.Drawing.Size(65, 26);
+            this.labelKeyboard.TabIndex = 77;
+            this.labelKeyboard.Text = " ";
             // 
             // btnConnectKeyboard
             // 
@@ -508,7 +446,7 @@
             // pictureStatusKeyboard
             // 
             this.pictureStatusKeyboard.BackColor = System.Drawing.Color.White;
-            this.pictureStatusKeyboard.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.nxt_red;
+            this.pictureStatusKeyboard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureStatusKeyboard.BackgroundImage")));
             this.pictureStatusKeyboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureStatusKeyboard.Location = new System.Drawing.Point(301, 156);
             this.pictureStatusKeyboard.Name = "pictureStatusKeyboard";
@@ -528,7 +466,7 @@
             // pictureStatusGamepad
             // 
             this.pictureStatusGamepad.BackColor = System.Drawing.Color.White;
-            this.pictureStatusGamepad.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.nxt_red;
+            this.pictureStatusGamepad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureStatusGamepad.BackgroundImage")));
             this.pictureStatusGamepad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureStatusGamepad.Location = new System.Drawing.Point(301, 330);
             this.pictureStatusGamepad.Name = "pictureStatusGamepad";
@@ -548,7 +486,7 @@
             // pictureStatusTouch
             // 
             this.pictureStatusTouch.BackColor = System.Drawing.Color.White;
-            this.pictureStatusTouch.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.nxt_red;
+            this.pictureStatusTouch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureStatusTouch.BackgroundImage")));
             this.pictureStatusTouch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureStatusTouch.Location = new System.Drawing.Point(301, 244);
             this.pictureStatusTouch.Name = "pictureStatusTouch";
@@ -567,7 +505,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.kifen;
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox11.Location = new System.Drawing.Point(1656, 15);
             this.pictureBox11.Name = "pictureBox11";
@@ -578,7 +516,7 @@
             // pictureStatusKinect
             // 
             this.pictureStatusKinect.BackColor = System.Drawing.Color.White;
-            this.pictureStatusKinect.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.nxt_red;
+            this.pictureStatusKinect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureStatusKinect.BackgroundImage")));
             this.pictureStatusKinect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureStatusKinect.Location = new System.Drawing.Point(301, 414);
             this.pictureStatusKinect.Name = "pictureStatusKinect";
@@ -589,7 +527,7 @@
             // pictureKinect
             // 
             this.pictureKinect.BackColor = System.Drawing.Color.White;
-            this.pictureKinect.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.kinect_red;
+            this.pictureKinect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureKinect.BackgroundImage")));
             this.pictureKinect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureKinect.Location = new System.Drawing.Point(301, 82);
             this.pictureKinect.Name = "pictureKinect";
@@ -600,7 +538,7 @@
             // overlayLift
             // 
             this.overlayLift.BackColor = System.Drawing.Color.White;
-            this.overlayLift.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.Circle_idle;
+            this.overlayLift.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("overlayLift.BackgroundImage")));
             this.overlayLift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.overlayLift.Location = new System.Drawing.Point(1475, 384);
             this.overlayLift.Name = "overlayLift";
@@ -612,7 +550,7 @@
             // overlayTilt
             // 
             this.overlayTilt.BackColor = System.Drawing.Color.White;
-            this.overlayTilt.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.Circle_idle;
+            this.overlayTilt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("overlayTilt.BackgroundImage")));
             this.overlayTilt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.overlayTilt.Location = new System.Drawing.Point(1114, 384);
             this.overlayTilt.Name = "overlayTilt";
@@ -683,7 +621,7 @@
             // 
             // pictureSpeech
             // 
-            this.pictureSpeech.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.voice_red;
+            this.pictureSpeech.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureSpeech.BackgroundImage")));
             this.pictureSpeech.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureSpeech.Location = new System.Drawing.Point(1522, 82);
             this.pictureSpeech.Name = "pictureSpeech";
@@ -694,7 +632,7 @@
             // videoImage
             // 
             this.videoImage.BackColor = System.Drawing.SystemColors.Window;
-            this.videoImage.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.kifen_noimg;
+            this.videoImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoImage.BackgroundImage")));
             this.videoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.videoImage.Location = new System.Drawing.Point(301, 66);
             this.videoImage.Name = "videoImage";
@@ -738,7 +676,9 @@
             this.touchUL.Size = new System.Drawing.Size(86, 86);
             this.touchUL.TabIndex = 85;
             this.touchUL.TabStop = false;
+            this.touchUL.DragEnter += new System.Windows.Forms.DragEventHandler(this.touchUL_DragEnter);
             this.touchUL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUL.MouseEnter += new System.EventHandler(this.touchControl_MouseMove);
             this.touchUL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
             this.touchUL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
             // 
@@ -876,24 +816,20 @@
             this.Controls.Add(this.btnConnectTouch);
             this.Controls.Add(this.btnConnectKeyboard);
             this.Controls.Add(this.pictureStatusKeyboard);
-            this.Controls.Add(this.labelStatusKeyboard);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.labelKeyboard);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureStatusGamepad);
-            this.Controls.Add(this.labelStatusGamepad);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelGamepad);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureStatusTouch);
-            this.Controls.Add(this.labelStatusTouch);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelTouch);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureStatusKinect);
             this.Controls.Add(this.pictureKinect);
-            this.Controls.Add(this.labelStatusKinect);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelKinect);
             this.Controls.Add(this.btnEStop);
             this.Controls.Add(this.btnTglManip);
             this.Controls.Add(this.btnTglDrive);
@@ -923,7 +859,7 @@
             this.Controls.Add(this.pictureBox10);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "KIFEN";
+            this.Text = "WIFEN";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -977,7 +913,7 @@
         private System.Windows.Forms.Label labelDriver;
         private System.Windows.Forms.Label labelManipulator;
         private System.Windows.Forms.PictureBox pictureKinect;
-        private System.Windows.Forms.PictureBox pictureStatusKinect;
+        public System.Windows.Forms.PictureBox pictureStatusKinect;
         private System.Windows.Forms.PictureBox pictureSpeech;
         private System.Windows.Forms.Timer timerLoader;
         private System.Windows.Forms.Timer timerKinectConnection;
@@ -998,27 +934,22 @@
         private System.Windows.Forms.Button btnTglDrive;
         private System.Windows.Forms.Button btnTglManip;
         private System.Windows.Forms.Button btnEStop;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelStatusKinect;
+        public System.Windows.Forms.Label labelKinect;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Timer timerHideStatKinect;
-        private System.Windows.Forms.Timer timerHideStatNxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Timer timerUpdateNxt;
-        private System.Windows.Forms.PictureBox pictureStatusTouch;
-        private System.Windows.Forms.Label labelStatusTouch;
-        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox pictureStatusTouch;
+        public System.Windows.Forms.Label labelTouch;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureStatusGamepad;
-        private System.Windows.Forms.Label labelStatusGamepad;
-        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.PictureBox pictureStatusGamepad;
+        public System.Windows.Forms.Label labelGamepad;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureStatusKeyboard;
-        private System.Windows.Forms.Label labelStatusKeyboard;
-        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.PictureBox pictureStatusKeyboard;
+        public System.Windows.Forms.Label labelKeyboard;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnConnectKeyboard;
         private System.Windows.Forms.Button btnConnectTouch;

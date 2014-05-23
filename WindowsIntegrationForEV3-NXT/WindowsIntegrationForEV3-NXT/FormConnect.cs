@@ -78,6 +78,14 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         parent.p1.nxt.Connection.Open();
                         this.button2.Text = "Disconnect";
+                        if (com == "wifi")
+                            parent.labelKeyboard.Text = " ";
+                        else if (com == "usb")
+                            parent.labelKeyboard.Text = " ";
+                        else
+                            parent.labelKeyboard.Text = " ";
+
+                        parent.pictureStatusKeyboard.BackgroundImage = Properties.Resources.nxt_green;
                     }
                     catch (Exception eP1_NXT)
                     {
@@ -96,6 +104,14 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         parent.p1.nxt.Connection.Open();
                         this.button2.Text = "Disconnect";
+                        if (com == "wifi")
+                            parent.labelKeyboard.Text = " ";
+                        else if (com == "usb")
+                            parent.labelKeyboard.Text = " ";
+                        else
+                            parent.labelKeyboard.Text = " ";
+
+                        parent.pictureStatusKeyboard.BackgroundImage = Properties.Resources.ev3_green;
                     }
                     catch (Exception eP1_EV3)
                     {
@@ -117,6 +133,14 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         parent.p2.nxt.Connection.Open();
                         this.button2.Text = "Disconnect";
+                        if (com == "wifi")
+                            parent.labelTouch.Text = " ";
+                        else if (com == "usb")
+                            parent.labelTouch.Text = " ";
+                        else
+                            parent.labelTouch.Text = " ";
+
+                        parent.pictureStatusTouch.BackgroundImage = Properties.Resources.nxt_green;
                     }
                     catch (Exception ep2_NXT)
                     {
@@ -135,6 +159,14 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         parent.p2.nxt.Connection.Open();
                         this.button2.Text = "Disconnect";
+                        if (com == "wifi")
+                            parent.labelTouch.Text = " ";
+                        else if (com == "usb")
+                            parent.labelTouch.Text = " ";
+                        else
+                            parent.labelTouch.Text = " ";
+
+                        parent.pictureStatusTouch.BackgroundImage = Properties.Resources.ev3_green;
                     }
                     catch (Exception ep2_EV3)
                     {
@@ -156,6 +188,15 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         parent.p3.nxt.Connection.Open();
                         this.button2.Text = "Disconnect";
+
+                        if (com == "wifi")
+                            parent.labelGamepad.Text = " ";
+                        else if (com == "usb")
+                            parent.labelGamepad.Text = " ";
+                        else
+                            parent.labelGamepad.Text = " ";
+
+                        parent.pictureStatusGamepad.BackgroundImage = Properties.Resources.nxt_green;
                     }
                     catch (Exception ep3_NXT)
                     {
@@ -174,6 +215,15 @@ namespace WindowsIntegrationForEV3_NXT
                     {
                         parent.p3.nxt.Connection.Open();
                         this.button2.Text = "Disconnect";
+
+                        if (com == "wifi")
+                            parent.labelGamepad.Text = " ";
+                        else if (com == "usb")
+                            parent.labelGamepad.Text = " ";
+                        else
+                            parent.labelGamepad.Text = " ";
+
+                        parent.pictureStatusGamepad.BackgroundImage = Properties.Resources.ev3_green;
                     }
                     catch (Exception ep3_EV3)
                     {
