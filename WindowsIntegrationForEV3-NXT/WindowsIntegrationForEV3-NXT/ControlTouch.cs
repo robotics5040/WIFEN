@@ -32,13 +32,47 @@ namespace WindowsIntegrationForEV3_NXT
             isDown = false;
         }
 
-        public void onCursorMoveEvent(PictureBox sender)
+        public void onCursorMoveEvent(PictureBox sender, MouseEventArgs e, Form1 parent)
         {
             if (isDown)
             {
-                switch(sender.Name)
+                string name = "default";
+
+                int x = sender.Bounds.X + e.X;
+                int y = sender.Bounds.Y + e.Y;
+
+                if (x >= parent.touchUL.Bounds.X && x <= parent.touchUL.Bounds.X + parent.touchUL.Bounds.Width
+                    && y >= parent.touchUL.Bounds.Y && y <= parent.touchUL.Bounds.Y + parent.touchUL.Bounds.Height)
+                    name = "touchUL";
+                else if (x >= parent.touchUC.Bounds.X && x <= parent.touchUC.Bounds.X + parent.touchUC.Bounds.Width
+                    && y >= parent.touchUC.Bounds.Y && y <= parent.touchUC.Bounds.Y + parent.touchUC.Bounds.Height)
+                    name = "touchUC";
+                else if (x >= parent.touchUR.Bounds.X && x <= parent.touchUR.Bounds.X + parent.touchUR.Bounds.Width
+                    && y >= parent.touchUR.Bounds.Y && y <= parent.touchUR.Bounds.Y + parent.touchUR.Bounds.Height)
+                    name = "touchUR";
+                else if (x >= parent.touchCL.Bounds.X && x <= parent.touchCL.Bounds.X + parent.touchCL.Bounds.Width
+                    && y >= parent.touchCL.Bounds.Y && y <= parent.touchCL.Bounds.Y + parent.touchCL.Bounds.Height)
+                    name = "touchCL";
+                else if (x >= parent.touchCenter.Bounds.X && x <= parent.touchCenter.Bounds.X + parent.touchCenter.Bounds.Width
+                    && y >= parent.touchCenter.Bounds.Y && y <= parent.touchCenter.Bounds.Y + parent.touchCenter.Bounds.Height)
+                    name = "touchCenter";
+                else if (x >= parent.touchCR.Bounds.X && x <= parent.touchCR.Bounds.X + parent.touchCR.Bounds.Width
+                    && y >= parent.touchCR.Bounds.Y && y <= parent.touchCR.Bounds.Y + parent.touchCR.Bounds.Height)
+                    name = "touchCR";
+                else if (x >= parent.touchDL.Bounds.X && x <= parent.touchDL.Bounds.X + parent.touchDL.Bounds.Width
+                    && y >= parent.touchDL.Bounds.Y && y <= parent.touchDL.Bounds.Y + parent.touchDL.Bounds.Height)
+                    name = "touchDL";
+                else if (x >= parent.touchDC.Bounds.X && x <= parent.touchDC.Bounds.X + parent.touchDC.Bounds.Width
+                    && y >= parent.touchDC.Bounds.Y && y <= parent.touchDC.Bounds.Y + parent.touchDC.Bounds.Height)
+                    name = "touchDC";
+                else if (x >= parent.touchDR.Bounds.X && x <= parent.touchDR.Bounds.X + parent.touchDR.Bounds.Width
+                    && y >= parent.touchDR.Bounds.Y && y <= parent.touchDR.Bounds.Y + parent.touchDR.Bounds.Height)
+                    name = "touchDR";
+
+                switch(name)
                 {
                     case "touchUL": //Swing turn L
+                        MessageBox.Show("hello");
                         powerL = 30;
                         powerR = 60;
                         break;
@@ -80,6 +114,9 @@ namespace WindowsIntegrationForEV3_NXT
                         break;
                 }
                 updateDrive();
+
+                parent.label1.Visible = true;
+                parent.label1.Text = "l" + powerL + " r" + powerR;
             }
         }
 

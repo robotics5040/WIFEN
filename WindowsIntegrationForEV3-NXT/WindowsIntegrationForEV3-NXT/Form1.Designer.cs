@@ -60,6 +60,18 @@
             this.btnConnectTouch = new System.Windows.Forms.Button();
             this.btnConnectGamepad = new System.Windows.Forms.Button();
             this.btnConnectKinect = new System.Windows.Forms.Button();
+            this.timerGamepad = new System.Windows.Forms.Timer(this.components);
+            this.btnGamepad = new System.Windows.Forms.Button();
+            this.touchDC = new System.Windows.Forms.PictureBox();
+            this.touchCenter = new System.Windows.Forms.PictureBox();
+            this.touchUC = new System.Windows.Forms.PictureBox();
+            this.touchDR = new System.Windows.Forms.PictureBox();
+            this.touchCR = new System.Windows.Forms.PictureBox();
+            this.touchUR = new System.Windows.Forms.PictureBox();
+            this.touchDL = new System.Windows.Forms.PictureBox();
+            this.touchCL = new System.Windows.Forms.PictureBox();
+            this.touchUL = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureStatusKeyboard = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureStatusGamepad = new System.Windows.Forms.PictureBox();
@@ -81,18 +93,16 @@
             this.videoImage = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.touchUL = new System.Windows.Forms.PictureBox();
-            this.touchCL = new System.Windows.Forms.PictureBox();
-            this.touchDL = new System.Windows.Forms.PictureBox();
-            this.touchDR = new System.Windows.Forms.PictureBox();
-            this.touchCR = new System.Windows.Forms.PictureBox();
-            this.touchUR = new System.Windows.Forms.PictureBox();
-            this.touchDC = new System.Windows.Forms.PictureBox();
-            this.touchCenter = new System.Windows.Forms.PictureBox();
-            this.touchUC = new System.Windows.Forms.PictureBox();
-            this.timerGamepad = new System.Windows.Forms.Timer(this.components);
-            this.btnGamepad = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.touchDC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchCenter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchUC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchDR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchCR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchUR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchDL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchCL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchUL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStatusKeyboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStatusGamepad)).BeginInit();
@@ -114,16 +124,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.videoImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchUL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchCL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchDL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchDR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchCR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchUR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchDC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchCenter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchUC)).BeginInit();
             this.SuspendLayout();
             // 
             // labelMotorsL
@@ -443,6 +443,139 @@
             this.btnConnectKinect.UseVisualStyleBackColor = true;
             this.btnConnectKinect.Click += new System.EventHandler(this.btnConnectKinect_Click);
             // 
+            // timerGamepad
+            // 
+            this.timerGamepad.Interval = 10;
+            this.timerGamepad.Tick += new System.EventHandler(this.timerGamepad_Tick);
+            // 
+            // btnGamepad
+            // 
+            this.btnGamepad.Location = new System.Drawing.Point(135, 961);
+            this.btnGamepad.Name = "btnGamepad";
+            this.btnGamepad.Size = new System.Drawing.Size(160, 46);
+            this.btnGamepad.TabIndex = 94;
+            this.btnGamepad.Text = "Find Controller";
+            this.btnGamepad.UseVisualStyleBackColor = true;
+            this.btnGamepad.Click += new System.EventHandler(this.btnGamepad_Click);
+            // 
+            // touchDC
+            // 
+            this.touchDC.BackColor = System.Drawing.Color.Gray;
+            this.touchDC.Location = new System.Drawing.Point(1707, 915);
+            this.touchDC.Name = "touchDC";
+            this.touchDC.Size = new System.Drawing.Size(86, 86);
+            this.touchDC.TabIndex = 93;
+            this.touchDC.TabStop = false;
+            this.touchDC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchDC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchDC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchCenter
+            // 
+            this.touchCenter.BackColor = System.Drawing.Color.Gray;
+            this.touchCenter.Location = new System.Drawing.Point(1707, 826);
+            this.touchCenter.Name = "touchCenter";
+            this.touchCenter.Size = new System.Drawing.Size(86, 86);
+            this.touchCenter.TabIndex = 92;
+            this.touchCenter.TabStop = false;
+            this.touchCenter.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchCenter.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchCenter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchUC
+            // 
+            this.touchUC.BackColor = System.Drawing.Color.Gray;
+            this.touchUC.Location = new System.Drawing.Point(1707, 737);
+            this.touchUC.Name = "touchUC";
+            this.touchUC.Size = new System.Drawing.Size(86, 86);
+            this.touchUC.TabIndex = 91;
+            this.touchUC.TabStop = false;
+            this.touchUC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchUC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchDR
+            // 
+            this.touchDR.BackColor = System.Drawing.Color.Gray;
+            this.touchDR.Location = new System.Drawing.Point(1795, 915);
+            this.touchDR.Name = "touchDR";
+            this.touchDR.Size = new System.Drawing.Size(86, 86);
+            this.touchDR.TabIndex = 90;
+            this.touchDR.TabStop = false;
+            this.touchDR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchDR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchDR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchCR
+            // 
+            this.touchCR.BackColor = System.Drawing.Color.Gray;
+            this.touchCR.Location = new System.Drawing.Point(1795, 826);
+            this.touchCR.Name = "touchCR";
+            this.touchCR.Size = new System.Drawing.Size(86, 86);
+            this.touchCR.TabIndex = 89;
+            this.touchCR.TabStop = false;
+            this.touchCR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchCR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchCR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchUR
+            // 
+            this.touchUR.BackColor = System.Drawing.Color.Gray;
+            this.touchUR.Location = new System.Drawing.Point(1795, 737);
+            this.touchUR.Name = "touchUR";
+            this.touchUR.Size = new System.Drawing.Size(86, 86);
+            this.touchUR.TabIndex = 88;
+            this.touchUR.TabStop = false;
+            this.touchUR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchUR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchDL
+            // 
+            this.touchDL.BackColor = System.Drawing.Color.Gray;
+            this.touchDL.Location = new System.Drawing.Point(1617, 915);
+            this.touchDL.Name = "touchDL";
+            this.touchDL.Size = new System.Drawing.Size(86, 86);
+            this.touchDL.TabIndex = 87;
+            this.touchDL.TabStop = false;
+            this.touchDL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchDL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchDL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchCL
+            // 
+            this.touchCL.BackColor = System.Drawing.Color.Gray;
+            this.touchCL.Location = new System.Drawing.Point(1617, 826);
+            this.touchCL.Name = "touchCL";
+            this.touchCL.Size = new System.Drawing.Size(86, 86);
+            this.touchCL.TabIndex = 86;
+            this.touchCL.TabStop = false;
+            this.touchCL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchCL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchCL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // touchUL
+            // 
+            this.touchUL.BackColor = System.Drawing.Color.Gray;
+            this.touchUL.Location = new System.Drawing.Point(1617, 737);
+            this.touchUL.Name = "touchUL";
+            this.touchUL.Size = new System.Drawing.Size(86, 86);
+            this.touchUL.TabIndex = 85;
+            this.touchUL.TabStop = false;
+            this.touchUL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
+            this.touchUL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            this.touchUL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox1.Location = new System.Drawing.Point(1614, 734);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(270, 270);
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            // 
             // pictureStatusKeyboard
             // 
             this.pictureStatusKeyboard.BackColor = System.Drawing.Color.White;
@@ -505,7 +638,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.wifenICO;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox11.Location = new System.Drawing.Point(1656, 15);
             this.pictureBox11.Name = "pictureBox11";
@@ -632,7 +765,7 @@
             // videoImage
             // 
             this.videoImage.BackColor = System.Drawing.SystemColors.Window;
-            this.videoImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoImage.BackgroundImage")));
+            this.videoImage.BackgroundImage = global::WindowsIntegrationForEV3_NXT.Properties.Resources.wifen_noimg;
             this.videoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.videoImage.Location = new System.Drawing.Point(301, 66);
             this.videoImage.Name = "videoImage";
@@ -657,141 +790,6 @@
             this.pictureBox10.Size = new System.Drawing.Size(181, 58);
             this.pictureBox10.TabIndex = 51;
             this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.Location = new System.Drawing.Point(1614, 734);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 270);
-            this.pictureBox1.TabIndex = 84;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            // 
-            // touchUL
-            // 
-            this.touchUL.BackColor = System.Drawing.Color.Gray;
-            this.touchUL.Location = new System.Drawing.Point(1617, 737);
-            this.touchUL.Name = "touchUL";
-            this.touchUL.Size = new System.Drawing.Size(86, 86);
-            this.touchUL.TabIndex = 85;
-            this.touchUL.TabStop = false;
-            this.touchUL.DragEnter += new System.Windows.Forms.DragEventHandler(this.touchUL_DragEnter);
-            this.touchUL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchUL.MouseEnter += new System.EventHandler(this.touchControl_MouseMove);
-            this.touchUL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchUL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchCL
-            // 
-            this.touchCL.BackColor = System.Drawing.Color.Gray;
-            this.touchCL.Location = new System.Drawing.Point(1617, 826);
-            this.touchCL.Name = "touchCL";
-            this.touchCL.Size = new System.Drawing.Size(86, 86);
-            this.touchCL.TabIndex = 86;
-            this.touchCL.TabStop = false;
-            this.touchCL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchCL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchCL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchDL
-            // 
-            this.touchDL.BackColor = System.Drawing.Color.Gray;
-            this.touchDL.Location = new System.Drawing.Point(1617, 915);
-            this.touchDL.Name = "touchDL";
-            this.touchDL.Size = new System.Drawing.Size(86, 86);
-            this.touchDL.TabIndex = 87;
-            this.touchDL.TabStop = false;
-            this.touchDL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchDL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchDL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchDR
-            // 
-            this.touchDR.BackColor = System.Drawing.Color.Gray;
-            this.touchDR.Location = new System.Drawing.Point(1795, 915);
-            this.touchDR.Name = "touchDR";
-            this.touchDR.Size = new System.Drawing.Size(86, 86);
-            this.touchDR.TabIndex = 90;
-            this.touchDR.TabStop = false;
-            this.touchDR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchDR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchDR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchCR
-            // 
-            this.touchCR.BackColor = System.Drawing.Color.Gray;
-            this.touchCR.Location = new System.Drawing.Point(1795, 826);
-            this.touchCR.Name = "touchCR";
-            this.touchCR.Size = new System.Drawing.Size(86, 86);
-            this.touchCR.TabIndex = 89;
-            this.touchCR.TabStop = false;
-            this.touchCR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchCR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchCR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchUR
-            // 
-            this.touchUR.BackColor = System.Drawing.Color.Gray;
-            this.touchUR.Location = new System.Drawing.Point(1795, 737);
-            this.touchUR.Name = "touchUR";
-            this.touchUR.Size = new System.Drawing.Size(86, 86);
-            this.touchUR.TabIndex = 88;
-            this.touchUR.TabStop = false;
-            this.touchUR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchUR.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchUR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchDC
-            // 
-            this.touchDC.BackColor = System.Drawing.Color.Gray;
-            this.touchDC.Location = new System.Drawing.Point(1707, 915);
-            this.touchDC.Name = "touchDC";
-            this.touchDC.Size = new System.Drawing.Size(86, 86);
-            this.touchDC.TabIndex = 93;
-            this.touchDC.TabStop = false;
-            this.touchDC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchDC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchDC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchCenter
-            // 
-            this.touchCenter.BackColor = System.Drawing.Color.Gray;
-            this.touchCenter.Location = new System.Drawing.Point(1707, 826);
-            this.touchCenter.Name = "touchCenter";
-            this.touchCenter.Size = new System.Drawing.Size(86, 86);
-            this.touchCenter.TabIndex = 92;
-            this.touchCenter.TabStop = false;
-            this.touchCenter.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchCenter.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchCenter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // touchUC
-            // 
-            this.touchUC.BackColor = System.Drawing.Color.Gray;
-            this.touchUC.Location = new System.Drawing.Point(1707, 737);
-            this.touchUC.Name = "touchUC";
-            this.touchUC.Size = new System.Drawing.Size(86, 86);
-            this.touchUC.TabIndex = 91;
-            this.touchUC.TabStop = false;
-            this.touchUC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseDown);
-            this.touchUC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
-            this.touchUC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseUp);
-            // 
-            // timerGamepad
-            // 
-            this.timerGamepad.Interval = 10;
-            this.timerGamepad.Tick += new System.EventHandler(this.timerGamepad_Tick);
-            // 
-            // btnGamepad
-            // 
-            this.btnGamepad.Location = new System.Drawing.Point(135, 961);
-            this.btnGamepad.Name = "btnGamepad";
-            this.btnGamepad.Size = new System.Drawing.Size(160, 46);
-            this.btnGamepad.TabIndex = 94;
-            this.btnGamepad.Text = "Find Controller";
-            this.btnGamepad.UseVisualStyleBackColor = true;
-            this.btnGamepad.Click += new System.EventHandler(this.btnGamepad_Click);
             // 
             // Form1
             // 
@@ -866,6 +864,17 @@
             this.Shown += new System.EventHandler(this.MainWindow_Loaded);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.touchControl_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.touchDC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchCenter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchUC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchDR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchCR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchUR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchDL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchCL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touchUL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStatusKeyboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStatusGamepad)).EndInit();
@@ -887,16 +896,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.videoImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchUL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchCL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchDL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchDR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchCR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchUR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchDC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchCenter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.touchUC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -920,7 +919,6 @@
         private System.Windows.Forms.Timer timerSpeech;
         private System.Windows.Forms.Label labelLMotors;
         private System.Windows.Forms.Label labelRMotors;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox overlayBarL;
         private System.Windows.Forms.PictureBox overlayBarR;
         private System.Windows.Forms.PictureBox overlayDeadzoneL;
@@ -956,17 +954,18 @@
         private System.Windows.Forms.Button btnConnectGamepad;
         private System.Windows.Forms.Button btnConnectKinect;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox touchUL;
-        private System.Windows.Forms.PictureBox touchCL;
-        private System.Windows.Forms.PictureBox touchDL;
-        private System.Windows.Forms.PictureBox touchDR;
-        private System.Windows.Forms.PictureBox touchCR;
-        private System.Windows.Forms.PictureBox touchUR;
-        private System.Windows.Forms.PictureBox touchDC;
-        private System.Windows.Forms.PictureBox touchCenter;
-        private System.Windows.Forms.PictureBox touchUC;
         private System.Windows.Forms.Timer timerGamepad;
         private System.Windows.Forms.Button btnGamepad;
+        public System.Windows.Forms.PictureBox touchUL;
+        public System.Windows.Forms.PictureBox touchCL;
+        public System.Windows.Forms.PictureBox touchDL;
+        public System.Windows.Forms.PictureBox touchDR;
+        public System.Windows.Forms.PictureBox touchCR;
+        public System.Windows.Forms.PictureBox touchUR;
+        public System.Windows.Forms.PictureBox touchDC;
+        public System.Windows.Forms.PictureBox touchCenter;
+        public System.Windows.Forms.PictureBox touchUC;
+        public System.Windows.Forms.Label label1;
     }
 }
 

@@ -273,6 +273,16 @@ namespace WindowsIntegrationForEV3_NXT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wifen_noimg {
+            get {
+                object obj = ResourceManager.GetObject("wifen_noimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wifenICO {
             get {
                 object obj = ResourceManager.GetObject("wifenICO", resourceCulture);

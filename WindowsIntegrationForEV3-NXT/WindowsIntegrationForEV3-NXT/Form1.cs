@@ -1116,7 +1116,7 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
         private void touchControl_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (p2 != null && sender is PictureBox)
-                p2.onCursorMoveEvent((PictureBox)sender);
+                p2.onCursorMoveEvent((PictureBox)sender, e, this);
         }
 
         private void timerGamepad_Tick(object sender, EventArgs e)
@@ -1139,18 +1139,6 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
                 timerGamepad.Enabled = true;
                 p3.controller.Vibrate(1, 1);
             }
-        }
-
-        private void touchControl_MouseMove(object sender, EventArgs e)
-        {
-            if (p2 != null && sender is PictureBox)
-                p2.onCursorMoveEvent((PictureBox)sender);
-        }
-
-        private void touchUL_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
-        {
-            if (p2 != null && sender is PictureBox)
-                p2.onCursorMoveEvent((PictureBox)sender);
         }
 
     }

@@ -184,4 +184,7 @@
   <data name="wifenICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wifenICO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wifen_noimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifen_noimg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
