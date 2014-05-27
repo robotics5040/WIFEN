@@ -1049,8 +1049,6 @@ Ensure you have the Microsoft Speech SDK installed and configured.",
         {
             if (this.p1 != null)
                 p1.onKeyDownEvent(sender, e);
-            this.label1.Visible = true;
-            this.label1.Text = e.KeyData.ToString();
         }
 
         private void btnConnectKeyboard_Click(object sender, EventArgs e)

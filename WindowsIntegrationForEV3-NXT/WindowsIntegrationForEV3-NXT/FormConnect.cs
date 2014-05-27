@@ -97,6 +97,7 @@ namespace WindowsIntegrationForEV3_NXT
                         break;
                 }
                 button2.Text = "Connect";
+                return;
             }
 
             string com;

@@ -114,9 +114,6 @@ namespace WindowsIntegrationForEV3_NXT
                         break;
                 }
                 updateDrive();
-
-                parent.label1.Visible = true;
-                parent.label1.Text = "l" + powerL + " r" + powerR;
             }
         }
 
