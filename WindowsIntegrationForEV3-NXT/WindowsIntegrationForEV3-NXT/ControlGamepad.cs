@@ -49,6 +49,10 @@ namespace WindowsIntegrationForEV3_NXT
                 powerR = 0;
             }
 
+            //Change power to multiple of 5
+            powerL = (int) Math.Floor((double) powerL / 5) * 5;
+            powerR = (int)Math.Floor((double)powerR / 5) * 5;
+
             label.Visible = true;
             label.Text = "R" + powerR + "L" + powerL; 
 

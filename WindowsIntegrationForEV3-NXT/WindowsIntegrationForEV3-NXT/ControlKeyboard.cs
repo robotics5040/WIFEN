@@ -52,12 +52,12 @@ namespace WindowsIntegrationForEV3_NXT
 
         public override void updateNXT()
         {
-            if (isUp && isLeft)
+            if (isUp && isRight)
             {
                 nxt.MotorB.On(30);
                 nxt.MotorC.On(60);
             }
-            else if (isUp && isRight)
+            else if (isUp && isLeft)
             {
                 nxt.MotorB.On(60);
                 nxt.MotorC.On(30);
@@ -67,12 +67,12 @@ namespace WindowsIntegrationForEV3_NXT
                 nxt.MotorB.On(60);
                 nxt.MotorC.On(60);
             }
-            else if (isDown && isLeft)
+            else if (isDown && isRight)
             {
                 nxt.MotorB.On(-30);
                 nxt.MotorC.On(-60);
             }
-            else if (isDown && isRight)
+            else if (isDown && isLeft)
             {
                 nxt.MotorB.On(-60);
                 nxt.MotorC.On(-30);
@@ -82,12 +82,12 @@ namespace WindowsIntegrationForEV3_NXT
                 nxt.MotorB.On(-60);
                 nxt.MotorC.On(-60);
             }
-            else if (isLeft)
+            else if (isRight)
             {
                 nxt.MotorB.On(-60);
                 nxt.MotorC.On(60);
             }
-            else if (isRight)
+            else if (isLeft)
             {
                 nxt.MotorB.On(60);
                 nxt.MotorC.On(-60);

@@ -30,6 +30,9 @@ namespace WindowsIntegrationForEV3_NXT
         public void onCursorUpEvent(PictureBox sender, MouseEventArgs e)
         {
             isDown = false;
+            powerL = 0;
+            powerR = 0;
+            updateDrive();
         }
 
         public void onCursorMoveEvent(PictureBox sender, MouseEventArgs e, Form1 parent)
@@ -71,8 +74,7 @@ namespace WindowsIntegrationForEV3_NXT
 
                 switch(name)
                 {
-                    case "touchUL": //Swing turn L
-                        MessageBox.Show("hello");
+                    case "touchUR": //Swing turn L
                         powerL = 30;
                         powerR = 60;
                         break;
@@ -80,11 +82,11 @@ namespace WindowsIntegrationForEV3_NXT
                         powerL = 60;
                         powerR = 60;
                         break;
-                    case "touchUR": //Swing turn R
+                    case "touchUL": //Swing turn R
                         powerL = 60;
                         powerR = 30;
                         break;
-                    case "touchCL": //Point turn L
+                    case "touchCR": //Point turn L
                         powerL = -50;
                         powerR = 50;
                         break;
@@ -92,11 +94,11 @@ namespace WindowsIntegrationForEV3_NXT
                         powerL = 0;
                         powerR = 0;
                         break;
-                    case "touchCR": //Point turn R
+                    case "touchCL": //Point turn R
                         powerL = 50;
                         powerR = -50;
                         break;
-                    case "touchDL": //Swing turn L backwards
+                    case "touchDR": //Swing turn L backwards
                         powerL = -30;
                         powerR = -60;
                         break;
@@ -104,7 +106,7 @@ namespace WindowsIntegrationForEV3_NXT
                         powerL = -60;
                         powerR = -60;
                         break;
-                    case "touchDR": //Swing turn R backwards
+                    case "touchDL": //Swing turn R backwards
                         powerL = -60;
                         powerR = -30;
                         break;
